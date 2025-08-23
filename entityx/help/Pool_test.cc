@@ -10,7 +10,6 @@
 
 #define CATCH_CONFIG_MAIN
 
-#include <vector>
 #include "entityx/3rdparty/catch.hpp"
 #include "entityx/help/Pool.h"
 

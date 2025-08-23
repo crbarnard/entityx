@@ -86,7 +86,7 @@ endif ()
 
 
 # Misc features
-check_include_file("stdint.h" HAVE_STDINT_H)
+check_include_file("cstdint" HAVE_STDINT_H)
 
 macro(require FEATURE_NAME MESSAGE_STRING)
     if (NOT ${${FEATURE_NAME}})
@@ -121,7 +121,7 @@ if (NOT CMAKE_BUILD_TYPE)
 endif()
 
 message(STATUS "-- Checking misc features")
-require(HAVE_STDINT_H "stdint.h")
+require(HAVE_STDINT_H "cstdint")
 
 # Things to install
 
@@ -146,7 +146,7 @@ if (ENTITYX_BUILD_SHARED)
           $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>)
 else()
     add_library(entityx STATIC ${sources})
-    set_target_properties(entityx PROPERTIES 
+    set_target_properties(entityx PROPERTIES
         DEBUG_POSTFIX "${CMAKE_DEBUG_POSTFIX}"
         FOLDER entityx)
     set(install_libs entityx)
