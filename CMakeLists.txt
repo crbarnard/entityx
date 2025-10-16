@@ -10,9 +10,9 @@ project(EntityX)
 
 message(STATUS "EntityX version ${ENTITYX_VERSION}")
 
-if(NOT DEFINED CMAKE_MACOSX_RPATH)
-  set(CMAKE_MACOSX_RPATH 0)
-endif()
+#if(NOT DEFINED CMAKE_MACOSX_RPATH)
+#  set(CMAKE_MACOSX_RPATH 0)
+#endif()
 
 
 include_directories(${CMAKE_CURRENT_LIST_DIR})
